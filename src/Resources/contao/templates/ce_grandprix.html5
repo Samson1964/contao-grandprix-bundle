@@ -1,0 +1,40 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+	<div class="grandprix_container">
+		<?php if (empty($this->rows)): ?>
+			<p class="empty"><?= $this->leer ?></p>
+		<?php else: ?>
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">Pl.</th>
+						<th scope="col">Teilnehmer</th>
+						<th scope="col">B</th>
+						<?php for ($x = 1; $x <= $this->anzahlTurniere; ++$x): ?>
+							<th scope="col">T<?= $x ?></th>
+						<?php endfor; ?>
+						<th scope="col">Summe</th>
+						<th scope="col">Anz.</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ($this->rows as $arrRow): ?>
+						<tr>
+							<td><?= '' !== $arrRow['platz'] ? $arrRow['platz'] . '.' : '&nbsp;' ?></td>
+							<td><?= \Contao\StringUtil::specialchars((string) $arrRow['name']) ?></td>
+							<td><?= $arrRow['bonus'] ?? '' ?></td>
+							<?php for ($x = 1; $x <= $this->anzahlTurniere; ++$x): ?>
+								<td><?= $arrRow['turniere'][$x] ?? '' ?></td>
+							<?php endfor; ?>
+							<td><?= $arrRow['punkte'] ?></td>
+							<td><?= $arrRow['anzahl'] ?></td>
+						</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
+		<?php endif; ?>
+	</div>
+
+<?php $this->endblock(); ?>

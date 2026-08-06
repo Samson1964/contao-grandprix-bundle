@@ -1,0 +1,9 @@
+# Das Bundle registriert derzeit keine eigenen Dienste: Das Inhaltselement wird
+# über das Contao-Register $GLOBALS['TL_CTE'] eingebunden und der Rechenkern
+# (Calculator\GrandPrixCalculator) wird direkt instanziert. Die Voreinstellungen
+# gelten für alle Dienste, die hier künftig ergänzt werden.
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false

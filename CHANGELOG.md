@@ -1,5 +1,13 @@
 # Berliner Schnellschach-Grand-Prix Changelog
 
+## Version 2.0.1 (2026-08-09)
+
+* Delete: Anlage des Backend-Bereichs "bsv" aus `config.php` entfernt; das
+  zugehörige Sprachlabel aus `languages/de/modules.php` entfernt. Der Bereich
+  wird nicht mehr benötigt, da er künftig von einer eigenen Erweiterung des
+  Berliner Schachverbands bereitgestellt wird - dieses Bundle trägt sein
+  Backend-Modul nur noch in den vorhandenen Bereich ein.
+
 ## Version 2.0.0 (2026-08-06)
 
 Portierung der Contao-3-Erweiterung `grandprix` auf **PHP 8.1+** sowie

@@ -9,20 +9,14 @@ declare(strict_types=1);
  * @license   LGPL-3.0-or-later
  */
 
-use Contao\ArrayUtil;
 use Schachbulle\ContaoGrandPrixBundle\ContentElements\GrandPrix;
 
 /*
- * Backend-Bereich BSV an erster Stelle anlegen, wenn noch nicht vorhanden
- * (andere Bundles des Berliner Schachverbands nutzen denselben Bereich)
- */
-if (!isset($GLOBALS['BE_MOD']['bsv']))
-{
-	ArrayUtil::arrayInsert($GLOBALS['BE_MOD'], 0, array('bsv' => array()));
-}
-
-/*
  * Backend-Modul
+ *
+ * Der Backend-Bereich "bsv" wird nicht mehr von diesem Bundle angelegt,
+ * sondern von einer eigenen Erweiterung des Berliner Schachverbands
+ * bereitgestellt.
  */
 $GLOBALS['BE_MOD']['bsv']['grandprix'] = array
 (

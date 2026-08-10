@@ -13,12 +13,8 @@ use Schachbulle\ContaoGrandPrixBundle\ContentElements\GrandPrix;
 
 /*
  * Backend-Modul
- *
- * Der Backend-Bereich "bsv" wird nicht mehr von diesem Bundle angelegt,
- * sondern von einer eigenen Erweiterung des Berliner Schachverbands
- * bereitgestellt.
  */
-$GLOBALS['BE_MOD']['bsv']['grandprix'] = array
+$GLOBALS['BE_MOD']['content']['grandprix'] = array
 (
 	'tables' => array('tl_grandprix', 'tl_grandprix_tournaments'),
 	'icon'   => 'bundles/contaograndprix/icons/icon.png',

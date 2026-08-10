@@ -1,5 +1,11 @@
 # Berliner Schnellschach-Grand-Prix Changelog
 
+## Version 2.0.2 (2026-08-09)
+
+* Change: Backend-Modul von `BE_MOD['bsv']` nach `BE_MOD['content']`
+  verschoben - das Modul sortiert sich jetzt in den bereits vom Contao-Kern
+  bereitgestellten Backend-Bereich "Inhalte" ein.
+
 ## Version 2.0.1 (2026-08-09)
 
 * Delete: Anlage des Backend-Bereichs "bsv" aus `config.php` entfernt; das
